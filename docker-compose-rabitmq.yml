@@ -1,0 +1,13 @@
+version: '3'
+services:
+  rabbitmq:
+    image: 'rabbitmq:latest'
+    ports:
+      - '5672:5672'
+      - '15672:15672' # Management plugin UI
+    networks:
+      - service-name
+
+networks:
+  service-name:
+    external: true

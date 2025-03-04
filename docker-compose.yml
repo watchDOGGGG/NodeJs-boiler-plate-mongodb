@@ -1,0 +1,11 @@
+version: '3'
+services:
+  define-service:
+    environment:
+      NODE_ENV: production
+    networks:
+      - service-name
+
+networks:
+  service-name:
+    external: true
